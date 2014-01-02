@@ -1,0 +1,46 @@
+{{!< default}}
+
+<div class="left-pane">
+  {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+  <ul>
+    <li><a href="https://twitter.com/nico_valencia" target="_blank" class="btn">twitter</a></li>
+    <li><a href="https://github.com/nicovalencia" target="_blank" class="btn">github</a></li>
+    <li><a href="http://www.linkedin.com/profile/view?id=39340790" target="_blank" class="btn">linkedin</a></li>
+  </ul>
+
+  <footer class="site-footer">
+    <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
+    <div class="inner">
+      <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2014</section>
+      <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a></section>
+    </div>
+  </footer>
+</div>
+
+<div class="right-pane">
+
+  <main class="content" role="main">
+
+    <h1><span>Nico Valencia</span> builds internet technology: websites, mobile apps, and network based hardware systems.</h1>
+    <h2>His flavour of development includes <a class="colorized" href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>, <a class="colorized" href="http://en.wikipedia.org/wiki/Nodejs" target="_blank">Node.js</a>, <a class="colorized" href="http://en.wikipedia.org/wiki/Backbonejs" target="_blank">Backbone.js</a>, and <a class="colorized" href="http://en.wikipedia.org/wiki/Ruby_(programming_language)" target="_blank">Ruby.</a></h2>
+
+    <div class="posts">
+      {{#foreach posts}}
+
+      <article class="{{post_class}}">
+          <header class="post-header">
+              <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}</span>
+              <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+          </header>
+          <section class="post-excerpt"><p>{{excerpt}}&hellip;</p></section>
+      </article>
+
+      {{/foreach}}
+
+      {{!! uncomment below for pagination_ }}
+      {{!! pagination}}
+    </div>
+
+  </main>
+
+</div>
