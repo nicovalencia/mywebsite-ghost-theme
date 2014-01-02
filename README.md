@@ -1,6 +1,11 @@
-# Casper
+# Mywebsite Ghost Theme // nicovalencia
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/).
+The default theme for my [Ghost](http://github.com/tryghost/ghost/) application.
+
+## Todo:
+
+* Switch google analytics to config driven data.
+* Disable google analytics in development.
 
 ## Copyright & License
 
